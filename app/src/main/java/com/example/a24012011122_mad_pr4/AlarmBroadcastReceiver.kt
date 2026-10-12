@@ -11,7 +11,7 @@ class AlarmBroadcastReceiver : BroadcastReceiver() {
         val message = intent.getStringExtra("ALARM_MESSAGE") ?: "Alarm triggered!"
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 
-        val serviceIntent = Intent(context, AlarmService::class.java).apply {
+           val serviceIntent = Intent(context, AlarmService::class.java).apply {
             putExtra("ALARM_MESSAGE", message)
         }
 
